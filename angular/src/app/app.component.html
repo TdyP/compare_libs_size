@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h1>✨ TODO App ✨</h1>
+  <form (submit)="addTask()">
+    <input
+      type="text"
+      [(ngModel)]="newTask"
+      placeholder="Nouvelle tâche"
+      required
+      name="newTask"
+    />
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <ul class="todo-list">
+    <li *ngFor="let task of tasks$ | async">
+      <input
+        type="checkbox"
+        [checked]="task.done"
+        (change)="toggleTask(task)"
+      />
+      <span class="title">{{ task.title }}</span>
+      <button (click)="deleteTask(task.id)">🗑</button>
+    </li>
+  </ul>
+</div>

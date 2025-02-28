@@ -1,0 +1,25 @@
+
+  input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .todo-list li .title {
+    flex: 1;
+    text-align: left;
+  }
